@@ -1,8 +1,9 @@
-# carros
+# Sistema simples de cadastro de Carros
 
 ## Project setup
 ```
-npm install
+Ao baixar o projeto em sua máquina certifique-se de ja estar com o node e vue devidamente instalados
+Após rode o comando npm install
 ```
 
 ### Compiles and hot-reloads for development

@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+geigsrc/config/db.json
 
 # local env files
 .env.local

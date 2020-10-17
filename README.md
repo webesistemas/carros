@@ -10,7 +10,7 @@ npm install
 ### API
 
 A API do projeto esta em [json-server](https://github.com/typicode/json-server) o arquivo /src/config/db.json é nosso banco de dados
-Instale o json-server e navegue pelo terminal ate o diretório do arquivo de.json e execute o seguinte comando:
+Instale o json-server e navegue pelo terminal ate o diretório do arquivo db.json e execute o seguinte comando:
 
 ```
 json-server --watch db.json
@@ -21,5 +21,7 @@ Nesse ponto ja é possível rodar o projeto em seu navegador. Mantenha o json-se
 ```
 npm run serve
 ```
+
+#:)
 
 

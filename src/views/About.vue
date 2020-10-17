@@ -1,5 +1,26 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <Titulo  :titulo="titulo"/>
+    <Contato />
   </div>
 </template>
+
+<script>
+import Contato from './Contato.vue'
+import Titulo from './Titulo.vue'
+export default {
+  name: 'About',
+  data () {
+    return {
+      titulo: 'Nome da pagina About'
+    }
+  },
+  components: {
+    Contato, Titulo
+  }
+}
+</script>
+
+<style scoped>
+h1{color:red}
+</style>>

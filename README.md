@@ -22,6 +22,6 @@ Nesse ponto ja é possível rodar o projeto em seu navegador. Mantenha o json-se
 npm run serve
 ```
 
-#:)
+# :)
 
 

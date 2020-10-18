@@ -17,7 +17,7 @@ json-server --watch db.json
 ```
 
 ### Executando o projeto
-Nesse ponto ja é possível rodar o projeto em seu navegador. Mantenha o json-server ativo no terminal anterior. E no terminal do projeto execute:
+Nesse ponto ja é possível rodar o projeto em seu navegador. Mantenha o json-server ativo no terminal anterior e no terminal do projeto execute:
 ```
 npm run serve
 ```

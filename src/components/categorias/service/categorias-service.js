@@ -1,10 +1,11 @@
 
 // https://github.com/axios/axios#response-schema
 import axios from 'axios'
-import config from '../../config/config'
+import config from '@/config/config'
+const uri = `${config.apiUrl}/categorias/`
 
 const read = async () => {
-  return await axios.get(`${config.apiUrl}/marcas`)
+  return await axios.get(uri)
     .then((response) => {
       return response.data
     })
@@ -13,8 +14,8 @@ const read = async () => {
     })
 }
 
-const filterMarcas = async nome => {
-  return await axios.get(`${config.apiUrl}/marcas/?nome_like=${nome}`)
+const filter = async nome => {
+  return await axios.get(`${uri}?nome_like=${nome}`)
     .then((response) => {
       return response.data
     })
@@ -24,7 +25,7 @@ const filterMarcas = async nome => {
 }
 
 const update = async item => {
-  return await axios.put(`${config.apiUrl}/marcas/${item.id}`, item)
+  return await axios.put(`${uri}${item.id}`, item)
     .then((response) => {
       return response.data
     })
@@ -34,7 +35,7 @@ const update = async item => {
 }
 
 const create = async item => {
-  return await axios.post(`${config.apiUrl}/marcas/`, item)
+  return await axios.post(uri, item)
     .then((response) => {
       return response.data
     })
@@ -44,7 +45,7 @@ const create = async item => {
 }
 
 const del = async id => {
-  return await axios.delete(`${config.apiUrl}/marcas/${id}`)
+  return await axios.delete(`${uri}${id}`)
     .then((response) => {
       return response
     })
@@ -55,7 +56,7 @@ const del = async id => {
 
 export default {
   read,
-  filterMarcas,
+  filter,
   update,
   create,
   del

@@ -1,5 +1,8 @@
-export default {
-  apiUrl: 'http://localhost:3000',
-  loginUrl: 'https://airton-restfull-jwt.herokuapp.com/signin',
-  TOKEN_CODIUB: 'token'
+var env = process.env.NODE_ENV || 'development'
+
+var config = {
+  development: require('./dev.js'),
+  production: require('./prod.js')
 }
+
+module.exports = config[env]

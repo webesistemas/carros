@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: 'FormMarca',
+  name: 'MarcasForm',
   props: {
     marca: {
       type: Object,

@@ -5,15 +5,18 @@ import axios from 'axios'
 
 export async function loginUser (username, password) {
   const response = { status: null, response: null }
-  await axios.post(config.loginUrl, { email: username, password: password })
+
+  await axios.post(config.kriptonApiUrl, { email: username, password: password })
     .then(resp => {
       setAuthToken(resp.data.token)
       response.status = 'ok'
       response.response = resp
+      console.log('adsf')
     })
     .catch(e => {
       response.status = 'error'
       response.response = e
+      console.log('adsf')
     })
   return response
 }
@@ -23,16 +26,16 @@ export function logoutUser () {
 }
 
 export function setAuthToken (token) {
-  localStorage.setItem(config.TOKEN_CODIUB, token)
+  localStorage.setItem(config.tokenName, token)
 }
 
 export function getAuthToken () {
-  return localStorage.getItem(config.TOKEN_CODIUB)
+  return localStorage.getItem(config.tokenName)
 }
 
 export function clearAuthToken () {
   // http.defaults.headers.common.Authorization = ''
-  localStorage.removeItem(config.TOKEN_CODIUB)
+  localStorage.removeItem(config.tokenName)
 }
 
 export function isLoggedIn () {

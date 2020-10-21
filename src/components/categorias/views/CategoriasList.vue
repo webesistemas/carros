@@ -3,15 +3,6 @@
     <p>Lista de Categorias</p>
     <hr />
 
-    <div class="mb-4" v-if="form">
-      <hr>
-      <b-form-input readonly  v-model="categoriaSelected.id" placeholder="Código da Categoria"></b-form-input>
-      <b-form-input v-model="categoriaSelected.nome" class="mt-2 mb-2" placeholder="Digite o nome da Categoria"></b-form-input>
-      <b-form-input v-model="categoriaSelected.descricao" class="mt-2 mb-2" placeholder="Digite a descrição da Categoria"></b-form-input>
-      <b-button variant="primary" class=" mb-4" @click="$emit('addOrUpdate',categoriaSelected)">{{categoriaSelected.id > 0 ? 'Editar' : 'Salvar'}}</b-button>
-      <b-button variant="danger" class=" ml-3 mb-4" @click="cancel">Cancelar</b-button>
-    </div>
-
      <div>
       <b-table
         striped

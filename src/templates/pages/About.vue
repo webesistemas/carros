@@ -1,13 +1,12 @@
 <template>
   <div class="about">
     <Titulo  :titulo="titulo"/>
-    <Contato />
   </div>
 </template>
 
 <script>
-import Contato from './Contato.vue'
-import Titulo from './Titulo.vue'
+
+import Titulo from './../components/Titulo.vue'
 export default {
   name: 'About',
   data () {
@@ -16,7 +15,7 @@ export default {
     }
   },
   components: {
-    Contato, Titulo
+    Titulo
   }
 }
 </script>

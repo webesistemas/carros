@@ -11,6 +11,7 @@
 </template>
 <script>
 import { loginUser } from '../service/auth-service'
+import { mapActions } from 'vuex'
 export default {
   name: 'Login',
   data () {
@@ -22,16 +23,21 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['setLoad']),
     async login () {
+      this.setLoad({ load: true })
       await loginUser(this.usuario, this.senha)
         .then(response => {
-          if (response.status === 'ok') { this.$router.push('/marcas') } else {
+          if (response.status === 'ok') {
+            this.$router.push('/dashboard')
+          } else {
             this.erro = 'Login inválido'
             setTimeout(() => {
               this.erro = null
             }, 2500)
           }
         })
+      this.setLoad({ load: false })
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <h1>{{titulo}}</h1>
+  <h2 class="mt-4 p-3">{{titulo}}</h2>
 </template>
 <script>
 export default {
@@ -9,7 +9,9 @@ export default {
 }
 </script>
 <style scoped>
-h1{display: block;
-color: blue;
-background-color: aquamarine;}
+h2{
+  display: block;
+  color:#FFFFFF;
+  background-color:#17a2b8;
+}
 </style>>

@@ -27,7 +27,7 @@ export default {
   created () {
     axios.get(this.uri)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         this.categorias = response.data
       })
       .catch(error => {

@@ -16,8 +16,10 @@
           is-nav
         >
           <b-navbar-nav>
-            <b-nav-item to="/">home</b-nav-item>
-            <b-nav-item to="/about">about</b-nav-item>
+            <b-nav-item to="/">Home</b-nav-item>
+            <b-nav-item to="/about">About</b-nav-item>
+            <b-nav-item to="/login">Login</b-nav-item>
+            <b-nav-item @click="logout">Logout</b-nav-item>
             <b-nav-item to="/categorias">Categorias</b-nav-item>
             <b-nav-item to="/marcas">Marcas</b-nav-item>
           </b-navbar-nav>
@@ -54,7 +56,17 @@
     </div>
   </div>
 </template>
-
+<script>
+import { logoutUser } from './auth/service/auth-service'
+export default {
+  methods: {
+    logout () {
+      logoutUser()
+      this.$router.push('/home')
+    }
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
